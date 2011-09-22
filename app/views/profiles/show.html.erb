@@ -16,13 +16,15 @@
 </p>
 
 <p>
+  <b>Encrypted password:</b>
+  <%= @user.encrypted_password %>
+</p>
+
+<p>
   <b>Zip code:</b>
   <%= @user.zip_code %>
 </p>
 
-<p>
-	<b>Bio:</b>
-	<%= @user.profile.about_me %>
-</p>
 
-<%= link_to 'Edit', edit_profile_path(current_user.profile) %>
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

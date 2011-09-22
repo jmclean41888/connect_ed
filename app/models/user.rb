@@ -2,6 +2,9 @@ class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :first_name, :last_name, :email, :password, :password_confirmation, :zip_code
   
+  has_one :profile
+  has_many :opportunities
+  
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   
   validates :first_name, 	:presence => true,

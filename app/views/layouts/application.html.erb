@@ -18,7 +18,7 @@
 			  <%= link_to "Sign out", signout_path %> | 
 				<%= link_to "Settings", edit_user_path(current_user)%>
 			<% else %>
-			  <%= link_to "Sign in", signin_path %>
+			  <%= link_to "Sign in", signin_path %><br />
 			<% end %>
 		</div>
 	</div>
@@ -27,6 +27,12 @@
 		<div id='left_bar'>
 			<div class='nav_header'>
 				<%= link_to 'Home', root_path %>
+			</div>
+			<div class='nav_box'>
+				<%= link_to 'Profile', user_path(current_user) %><br />
+				<%= link_to "My committments", '#' %><br />
+				<%= link_to "Find an opportunty", '#' %><br />
+				<%= link_to "Posted opportunities", '#' %><br />
 			</div>
 		</div>
 		<div id='content'>

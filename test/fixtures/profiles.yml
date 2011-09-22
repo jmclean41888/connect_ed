@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  about_me: MyText
+  industry: MyString
+  ethnicity: MyString
+  age: MyString
+  gender: MyString
+
+two:
+  about_me: MyText
+  industry: MyString
+  ethnicity: MyString
+  age: MyString
+  gender: MyString
