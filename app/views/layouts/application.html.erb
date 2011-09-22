@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ConnectEd</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+</head>
+<body>
+
+	
+	<div id='header'>
+		<%= link_to (image_tag 'logo.jpg', :id => 'logo'), root_path %>
+		<div id='top_navigation'>
+			<% if signed_in? %>
+			  Welcome, <%= @current_user.first_name %> | 
+			  <%= link_to "Sign out", signout_path %>
+			<% else %>
+			  <%= link_to "Sign in", signin_path %>
+			<% end %> | 
+			<a href='#'>Profile</a> | 
+			<a href='#'>Messages</a> | 
+			<a href='#'>Settings</a>
+		</div>
+	</div>
+<div id='wrapper'>
+	<div id='main'>
+		<div id='left_bar'>
+			left bar
+		</div>
+		<div id='content'>
+			<!--<div class='post_it'></div>
+			<div class='post_it'></div>
+			<div class='post_it'></div>
+			<div class='post_it'></div>-->
+			<%= yield %>
+		</div>
+	</div>
+</div>	
+	<div id='footer'>
+		Copyright 2011 ConnectEd
+	</div>
+</body>
+</html>
