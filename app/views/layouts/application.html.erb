@@ -15,19 +15,19 @@
 		<div id='top_navigation'>
 			<% if signed_in? %>
 			  Welcome, <%= @current_user.first_name %> | 
-			  <%= link_to "Sign out", signout_path %>
+			  <%= link_to "Sign out", signout_path %> | 
+				<%= link_to "Settings", edit_user_path(current_user)%>
 			<% else %>
 			  <%= link_to "Sign in", signin_path %>
-			<% end %> | 
-			<a href='#'>Profile</a> | 
-			<a href='#'>Messages</a> | 
-			<a href='#'>Settings</a>
+			<% end %>
 		</div>
 	</div>
 <div id='wrapper'>
 	<div id='main'>
 		<div id='left_bar'>
-			left bar
+			<div class='nav_header'>
+				<%= link_to 'Home', root_path %>
+			</div>
 		</div>
 		<div id='content'>
 			<!--<div class='post_it'></div>
